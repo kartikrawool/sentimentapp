@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from joblib import load 
 import numpy as np
 import pandas as pd 
@@ -10,4 +10,4 @@ model_in = load('svcmodel.joblib')
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return render_template('index.html')
