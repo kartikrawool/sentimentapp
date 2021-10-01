@@ -1,13 +1,24 @@
-<center>
-    <form method="POST">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
+
+</head>
+
+<body>
+
+
+    <center>
         <label>Copy paste a Tweet here.</label>
-        <input name="text">
-        <input type="submit">
-    </form>
-    <p>
-        {{ cleaned_tweet }}
-    </p>
-    <p>
-        {{ sentiment }}
-    </p>
-</center>
+        <form method="POST">
+            <br>
+            <input name="text">
+            <br>
+            <input type="submit">
+        </form>
+        <p>
+            {{ cleaned_tweet }}
+        </p>
+        <p>
+            {{ sentiment }}
+        </p>
+    </center>
+</body>
